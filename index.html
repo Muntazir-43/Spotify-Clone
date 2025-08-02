@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify - Web Player: Music for everyone</title>
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/utility.css">
+        <link rel="stylesheet" href="./styles/media.css">
+        <link rel="icon"
+            href="https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="navbar flex">
+                <div class="logo_bar flex">
+                    <div class="firstlogo"><img class="invert" src="./SVG/logo.svg"
+                            alt="Spotify Logo"></div>
+                    <div class="home"><img class="invert" src="./SVG/home.svg"
+                            alt="Home"></div>
+                    <div class="library_icon"><img id="library_svg" class="invert" src="./SVG/library.svg"
+                            alt="library icon"></div>
+                    <div class="Secondlogo"><img class="invert" src="./SVG/logo.svg"
+                            alt="Spotify Logo"></div>
+                </div>
+                <div class="search_bar flex" id="searchBar">
+                    <div class="search_icon" id="searchIcon">
+                        <img class="invert" src="./SVG/search.svg"
+                            alt="search icon">
+                    </div>
+                    <input type="search"
+                        placeholder="What do you want to play?">
+                    <div class="browse_icon" id="browseIcon">
+                        <img class="invert_light" src="./SVG/browse.svg"
+                            alt="browse icon">
+                    </div>
+                </div>
+                <div class="link_bar">
+                    <div class="links">
+                        <ul>
+                            <li class="li_flex"><a href="#">Premium</a><img
+                                    class="invert_light dis_none"
+                                    src="./SVG/link.svg"
+                                    alt="link icon"></li>
+                            <li class="li_flex"><a href="#">Support</a><img
+                                    class="invert_light dis_none"
+                                    src="./SVG/link.svg"
+                                    alt="link icon"></li>
+                            <li class="li_flex"><a href="#">Download</a><img
+                                    class="invert_light dis_none"
+                                    src="./SVG/link.svg"
+                                    alt="link icon"></li>
+                        </ul>
+                    </div>
+                    <div class="account">
+                        <ul>
+                            <li><a href="#"><img class="invert_light"
+                                        src="./SVG/Download.svg"
+                                        alt="Download Icon">&nbsp;Install
+                                    App</a></li>
+                            <li><a href="#">Sign up</a></li>
+                            <li class="login_btn"><a href="#">Log in</a></li>
+                            <li class="menu_toggle" id="menuToggle">
+                                <a href="#"><img class="invert_light"
+                                        id="menuIcon" src="./SVG/menu.svg"
+                                        alt="Menu Icon"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main_page flex">
+                <div class="library_section rounded_box">
+
+                    <div class="library flex">
+                        <p>Your Library</p>
+                        <span><img src="./SVG/add.svg" alt="add icon"></span>
+                    </div>
+                    <div class="library_main_content">
+                        <div class="library_playlist_podcast">
+                            <div class="create_playlist inner_rounded_box">
+                                <div>
+                                    <h3>Create your first playlist</h3>
+                                    <p>It's easy, we'll help you</p>
+                                </div>
+                                <div>
+                                    <button>
+                                        Create playlist
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="find_podcast inner_rounded_box">
+                                <div>
+                                    <h3>Let's find some podcasts to follow</h3>
+                                    <p>We'll keep you updated on new
+                                        episodes</p>
+                                </div>
+                                <div>
+                                    <button>
+                                        Browse podcasts
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="noha_list">
+
+                        </div>
+
+                    </div>
+                    <div class="about_links flex">
+                        <div>
+                            <a
+                                href="https://www.spotify.com/pk-en/legal/">Legal</a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.spotify.com/pk-en/safetyandprivacy/">Safety&PrivacyCenter</a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.spotify.com/pk-en/legal/privacy-policy/">PrivacyPolicy</a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.spotify.com/pk-en/legal/cookies-policy/">Cookies</a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3">About
+                                Ads</a>
+                        </div>
+                        <div>
+                            <a
+                                href="https://www.spotify.com/pk-en/accessibility/">Accessibility</a>
+                        </div>
+
+                        <div>
+                            <a
+                                href="https://www.spotify.com/legal/cookies-policy/"
+                                target="_blank">Cookies</a>
+                        </div>
+                    </div>
+                    <div class="language">
+                        <button>
+                            <img class="invert" src="./SVG/Lang.svg" alt>
+                            <p>English</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="Content_section rounded_box">
+                    <div class="content">
+                        <!-- Trending Section -->
+                        <div class="trend flex">
+                            <h2>Trending Nohas</h2>
+                            <h5>Show all</h5>
+                        </div>
+                        <div class="trending flex" id="trendingContainer">
+                            <div class="scroll-slide left" id="leftSlide">
+                                <button id="leftBtn"><img src="./SVG/left.svg"
+                                        alt="left scroll icon"></button>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Akhiri Shajda.jpg" alt>
+                                <h4>Akhri Sajda</h4>
+                                <p>2025 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/MEENGMO LA SKORAIN LAQPA.jpg"
+                                    alt>
+                                <h4>MEENGMO LA SKORAIN LAQPA</h4>
+                                <p>2025 • Khawaja Ali Kazim</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Zamana Tumhara Ya Hussain.jpg"
+                                    alt>
+                                <h4>Zamana Tumhara Ya Hussain</h4>
+                                <p>2025 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Rah-e-Najaf.jpeg" alt>
+                                <h4>Rah-e-Najaf</h4>
+                                <p>2025 • Sajjad Mohammadi</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/BETI ALI KI.jpg" alt>
+                                <h4>BETI ALI KI</h4>
+                                <p>2020 • Mir Hassan Mir</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Sab Yaad Hai Maula.jpg" alt>
+                                <h4>Sab Yaad Hai Maula</h4>
+                                <p>2023 • Ali Shanawar</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Ye Bali Sakina Hai.jpg" alt>
+                                <h4>Ye Bali Sakina Hai</h4>
+                                <p>2023 • Ali Jee</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Haider Haider.jpeg" alt>
+                                <h4> حیدر حیدر</h4>
+                                <p>2025 • Sajjad Mohammadi</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/BULANAY JAWONGI MUSHKIL KUSHA KO HATH PHELA KR.jpg"
+                                    alt>
+                                <h4>BULANAY JAWONGI MUSHKIL KUSHA KO HATH PHELA
+                                    KR</h4>
+                                <p>2024 • SYED SALIH JALALI</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Zainab E Hazin E Man.jpg" alt>
+                                <h4>Zainab E Hazin E Man</h4>
+                                <p>2020 • Ali Jee</p>
+                            </div>
+                            <div class="scroll-slide right" id="rightSlide">
+                                <button id="rightBtn"><img src="./SVG/right.svg"
+                                        alt="right scroll icon"></button>
+                            </div>
+                        </div>
+                        <!-- Popular Artist Section -->
+                        <div class="popular flex">
+                            <h2>Popular artists</h2>
+                            <h5>Show all</h5>
+                        </div>
+                        <div class="popular_artist_wrapper">
+                            <div class="scroll-slide left" id="P_leftSlide">
+                                <button id="P_leftBtn"><img src="./SVG/left.svg"
+                                        alt="left scroll icon"></button>
+                            </div>
+                            <div class="popular_artist flex"
+                                id="popularContainer">
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Nadeem Sarwar profile pic.jpg"
+                                        alt>
+                                    <h4>Nadeem Sarwar</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Ali Shanawar Profile pic.jpg"
+                                        alt>
+                                    <h4>Ali Shanawar</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Ali Jee Profile Pic.jpeg"
+                                        alt>
+                                    <h4>Ali Jee</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Mir Hassan Mir Profile Pic.jpeg"
+                                        alt>
+                                    <h4> Mir Hassan Mir</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Khawaja Ali Kazim Profile pic.jpg"
+                                        alt>
+                                    <h4> Khawaja Ali Kazim</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Ajmal Zakiri Profile Pic.jpg"
+                                        alt>
+                                    <h4> Ajmal Zakiri</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Shahid Baltistani Profile Pic.jpg"
+                                        alt>
+                                    <h4> Shahid Baltistani</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="scroll-slide right"
+                                    id="P_rightSlide">
+                                    <button id="P_rightBtn"><img
+                                            src="./SVG/right.svg"
+                                            alt="right scroll icon"></button>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Syed Salih Jalali Profile pic.jpg"
+                                        alt>
+                                    <h4> Syed Salih Jalali</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Mahdi Rasouli Profile Pic.jpg"
+                                        alt>
+                                    <h4> Mahdi Rasouli</h4>
+                                    <p>Artist</p>
+                                </div>
+                                <div class="profile">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Sajjad Mohammadi Profile pic.jpg"
+                                        alt>
+                                    <h4> Sajjad Mohammadi</h4>
+                                    <p>Artist</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Popular Album Section -->
+                        <div class="popular_album flex">
+                            <h2>Popular albums</h2>
+                            <h5>Show all</h5>
+                        </div>
+                        <div class="albums_wrapper">
+                            <div class="scroll-slide left" id="A_leftSlide">
+                                <button id="A_leftBtn"><img src="./SVG/left.svg"
+                                        alt="left scroll icon"></button>
+                            </div>
+                            <div class="albums flex" id="albumContainer">
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Nadeem Sarwar Album 25-26.png"
+                                        alt>
+                                    <h4>Noha Album 2025
+                                    </h4>
+                                    <p>2025 • Nadeem Sarwar</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Nadeem_Sarwar_Album 2.jpg"
+                                        alt>
+                                    <h4>Badshah Hussain Album</h4>
+                                    <p>2022 • Nadeem Sarwar</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Mir Hassan Mir Album.png"
+                                        alt>
+                                    <h4>Best Mir Hassan Mir Noha Album</h4>
+                                    <p>2024-25 • Mir Hassan Mir</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Nohay Album 2024.png"
+                                        alt>
+                                    <h4>Noha Album 2024</h4>
+                                    <p>2024 • Nadeem Sarwar</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Khawaja Ali Kazim Album.png"
+                                        alt>
+                                    <h4>Muharram Noha Album</h4>
+                                    <p>2023-25 • Khawaja Ali Kazim</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Ali Jee Album.png"
+                                        alt>
+                                    <h4>Muharram Urdu Noha Album</h4>
+                                    <p>2024 • Ali Jee</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Ajmal Zakiri Album.png"
+                                        alt>
+                                    <h4>Nohay Album For Muharram</h4>
+                                    <p>2025 • Ajmal Zakiri</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Ali Shanawar Album.png"
+                                        alt>
+                                    <h4>Urdu Noha Album</h4>
+                                    <p>2022 • Ali Shanawar</p>
+                                </div>
+                                <div class="album">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Mahdi Rasouli Farsi Album.png"
+                                        alt>
+                                    <h4>Farsi Noha Album</h4>
+                                    <p>2024 • Mahdi Rasouli</p>
+                                </div>
+                                <div class="scroll-slide right"
+                                    id="A_rightSlide">
+                                    <button id="A_rightBtn"><img
+                                            src="./SVG/right.svg"
+                                            alt="right scroll icon"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Popular Playlist Section -->
+                        <div class="popular_playlist flex">
+                            <h2>Popular playlist</h2>
+                            <h5>Show all</h5>
+                        </div>
+                        <div class="playlist_wrapper">
+                            <div class="scroll-slide left" id="Pl_leftSlide">
+                                <button id="Pl_leftBtn"><img
+                                        src="./SVG/left.svg"
+                                        alt="left scroll icon"></button>
+                            </div>
+                            <div class="playlists flex" id="playlistContainer">
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Playlist pic 1.jpeg"
+                                        alt>
+                                    <h4>Urdu Nohay 2025</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Playlist pic 2.jpeg"
+                                        alt>
+                                    <h4>Urdu Nohay 2024</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Balti Best Nohay.png"
+                                        alt>
+                                    <h4>Best Balti Nohay</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Playlist pic 3.png"
+                                        alt>
+                                    <h4>Farsi Nohay</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Mir Hassan Mir Nohay.jpeg"
+                                        alt>
+                                    <h4>Mir Hassan Mir Nohay</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img
+                                        src="./pics/Khawaja Ali Kazim Nohay.jpeg"
+                                        alt>
+                                    <h4>Khawaja Ali Kazim Nohay</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Irani Best Nohay.jpeg"
+                                        alt>
+                                    <h4>Irani Best Nohay</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Best Urdu Nohay.jpeg"
+                                        alt>
+                                    <h4>Best Urdu Nohay</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Best Nohay.jpeg"
+                                        alt>
+                                    <h4>Best Nohay</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="playlist">
+                                    <div class="play">
+                                        <img src="./SVG/play.svg"
+                                            alt="play button icon">
+                                    </div>
+                                    <img src="./pics/Playlist pic 1.jpeg"
+                                        alt>
+                                    <h4>Urdu Nohay 2025</h4>
+                                    <p>By Muntazir Mehdi</p>
+                                </div>
+                                <div class="scroll-slide right"
+                                    id="Pl_rightSlide">
+                                    <button id="Pl_rightBtn"><img
+                                            src="./SVG/right.svg"
+                                            alt="right scroll icon"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trending Nohas Show all -->
+                    <div class="trending_showall">
+                        <h1>Trending Nohas</h1>
+
+                        <div class="trending_showall_carts">
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Akhiri Shajda.jpg" alt>
+                                <h4>Akhri Sajda</h4>
+                                <p>2025 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/MEENGMO LA SKORAIN LAQPA.jpg"
+                                    alt>
+                                <h4>MEENGMO LA SKORAIN LAQPA</h4>
+                                <p>2025 • Khawaja Ali Kazim</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Zamana Tumhara Ya Hussain.jpg"
+                                    alt>
+                                <h4>Zamana Tumhara Ya Hussain</h4>
+                                <p>2025 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Rah-e-Najaf.jpeg" alt>
+                                <h4>Rah-e-Najaf</h4>
+                                <p>2025 • Sajjad Mohammadi</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/BETI ALI KI.jpg" alt>
+                                <h4>BETI ALI KI</h4>
+                                <p>2020 • Mir Hassan Mir</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Sab Yaad Hai Maula.jpg" alt>
+                                <h4>Sab Yaad Hai Maula</h4>
+                                <p>2023 • Ali Shanawar</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Ye Bali Sakina Hai.jpg" alt>
+                                <h4>Ye Bali Sakina Hai</h4>
+                                <p>2023 • Ali Jee</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Haider Haider.jpeg" alt>
+                                <h4> حیدر حیدر</h4>
+                                <p>2025 • Sajjad Mohammadi</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/BULANAY JAWONGI MUSHKIL KUSHA KO HATH PHELA KR.jpg"
+                                    alt>
+                                <h4>BULANAY JAWONGI MUSHKIL KUSHA KO HATH PHELA
+                                    KR</h4>
+                                <p>2024 • Syed Salih Jalali</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Zainab E Hazin E Man.jpg" alt>
+                                <h4>Zainab E Hazin E Man</h4>
+                                <p>2020 • Ali Jee</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Amma Fizza.jpg" alt>
+                                <h4>Amma Fizza</h4>
+                                <p>2023 • Mir Hassan Mir</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/NASKOOR HAI MENGMO.jpg" alt>
+                                <h4>NASKOOR HAI MENGMO</h4>
+                                <p>2025 • Ajmal Zakiri</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/BALTI QADEME NOHA.jpg" alt>
+                                <h4>BALTI QADEME NOHA</h4>
+                                <p>2025 • SHAYAN BHUTTO</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/MOMINO HAIDER E KARRAR (A.S).jpg"
+                                    alt>
+                                <h4>MOMINO HAIDER E KARRAR (A.S)</h4>
+                                <p>2024 • Khawaja Ali Kazim</p>
+                            </div>
+                            <div class="cart">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/سفرة العشق.jpeg" alt>
+                                <h4>سفرة العشق</h4>
+                                <p>2025 • Mahdi Rasouli</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Artist Show all -->
+                    <div class="artist_showall">
+                        <h1>Popular Artists</h1>
+                        <div class="artist_showall_profile">
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Nadeem Sarwar profile pic.jpg"
+                                    alt>
+                                <h4>Nadeem Sarwar</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ali Shanawar Profile pic.jpg"
+                                    alt>
+                                <h4>Ali Shanawar</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Ali Jee Profile Pic.jpeg"
+                                    alt>
+                                <h4>Ali Jee</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Mir Hassan Mir Profile Pic.jpeg"
+                                    alt>
+                                <h4> Mir Hassan Mir</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Khawaja Ali Kazim Profile pic.jpg"
+                                    alt>
+                                <h4> Khawaja Ali Kazim</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ajmal Zakiri Profile Pic.jpg"
+                                    alt>
+                                <h4> Ajmal Zakiri</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Shahid Baltistani Profile Pic.jpg"
+                                    alt>
+                                <h4> Shahid Baltistani</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Syed Salih Jalali Profile pic.jpg"
+                                    alt>
+                                <h4> Syed Salih Jalali</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Mahdi Rasouli Profile Pic.jpg"
+                                    alt>
+                                <h4> Mahdi Rasouli</h4>
+                                <p>Artist</p>
+                            </div>
+                            <div class="profile">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Sajjad Mohammadi Profile pic.jpg"
+                                    alt>
+                                <h4> Sajjad Mohammadi</h4>
+                                <p>Artist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Album Show all -->
+                    <div class="popular_album_showall">
+                        <h1>Popular Albums</h1>
+
+                        <div class="popular_album_showall_album">
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Nadeem Sarwar Album 25-26.png"
+                                    alt>
+                                <h4>Noha Album 2025
+                                </h4>
+                                <p>2025 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Nadeem_Sarwar_Album 2.jpg"
+                                    alt>
+                                <h4>Badshah Hussain Album</h4>
+                                <p>2022 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Mir Hassan Mir Album.png"
+                                    alt>
+                                <h4>Best Mir Hassan Mir Noha Album</h4>
+                                <p>2024-25 • Mir Hassan Mir</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Nohay Album 2024.png"
+                                    alt>
+                                <h4>Noha Album 2024</h4>
+                                <p>2024 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Khawaja Ali Kazim Album.png"
+                                    alt>
+                                <h4>Muharram Noha Album</h4>
+                                <p>2023 • Khawaja Ali Kazim</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Sajjad Mohammadi Irani Album.png"
+                                    alt>
+                                <h4>Irani Noha Album</h4>
+                                <p>2025 • Sajjad Rasouli</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ali Jee Album.png"
+                                    alt>
+                                <h4>Muharram Urdu Noha Album</h4>
+                                <p>2024 • Ali Jee</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ajmal Zakiri Album.png"
+                                    alt>
+                                <h4>Nohay Album For Muharram</h4>
+                                <p>2025 • Ajmal Zakiri</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ali Shanawar Album.png"
+                                    alt>
+                                <h4>Urdu Noha Album</h4>
+                                <p>2022 • Ali Shanawar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Mahdi Rasouli Farsi Album.png"
+                                    alt>
+                                <h4>Farsi Noha Album</h4>
+                                <p>2024 • Mahdi Rasouli</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Nadeem Sarwar Album 25-26.png"
+                                    alt>
+                                <h4>Noha Album 2025
+                                </h4>
+                                <p>2025 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Nadeem_Sarwar_Album 2.jpg"
+                                    alt>
+                                <h4>Badshah Hussain Album</h4>
+                                <p>2022 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Mir Hassan Mir Album.png"
+                                    alt>
+                                <h4>Best Mir Hassan Mir Noha Album</h4>
+                                <p>2024-25 • Mir Hassan Mir</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Nohay Album 2024.png"
+                                    alt>
+                                <h4>Noha Album 2024</h4>
+                                <p>2024 • Nadeem Sarwar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Khawaja Ali Kazim Album.png"
+                                    alt>
+                                <h4>Muharram Noha Album</h4>
+                                <p>2023 • Khawaja Ali Kazim</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Sajjad Mohammadi Irani Album.png"
+                                    alt>
+                                <h4>Irani Noha Album</h4>
+                                <p>2025 • Sajjad Rasouli</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ali Jee Album.png"
+                                    alt>
+                                <h4>Muharram Urdu Noha Album</h4>
+                                <p>2024 • Ali Jee</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ajmal Zakiri Album.png"
+                                    alt>
+                                <h4>Nohay Album For Muharram</h4>
+                                <p>2025 • Ajmal Zakiri</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Ali Shanawar Album.png"
+                                    alt>
+                                <h4>Urdu Noha Album</h4>
+                                <p>2022 • Ali Shanawar</p>
+                            </div>
+                            <div class="album">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img
+                                    src="./pics/Mahdi Rasouli Farsi Album.png"
+                                    alt>
+                                <h4>Farsi Noha Album</h4>
+                                <p>2024 • Mahdi Rasouli</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Playlist Show all -->
+                    <div class="popular_playlist_showall">
+                        <h1>Popular Albums</h1>
+                        <div class="popular_playlist_showall_playlist">
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Playlist pic 1.jpeg"
+                                    alt>
+                                <h4>Urdu Nohay 2025</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Playlist pic 2.jpeg"
+                                    alt>
+                                <h4>Urdu Nohay 2024</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Balti Best Nohay.png"
+                                    alt>
+                                <h4>Best Balti Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Playlist pic 3.png"
+                                    alt>
+                                <h4>Farsi Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Mir Hassan Mir Nohay.jpeg"
+                                    alt>
+                                <h4>Mir Hassan Mir Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Khawaja Ali Kazim Nohay.jpeg"
+                                    alt>
+                                <h4>Khawaja Ali Kazim Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Ali Akbar Nohay.jpeg"
+                                    alt>
+                                <h4>Ali Akbar Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Irani Best Nohay.jpeg"
+                                    alt>
+                                <h4>Irani Best Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Best Urdu Nohay.jpeg"
+                                    alt>
+                                <h4>Best Urdu Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Best Nohay.jpeg"
+                                    alt>
+                                <h4>Best Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Playlist pic 1.jpeg"
+                                    alt>
+                                <h4>Urdu Nohay 2025</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Playlist pic 2.jpeg"
+                                    alt>
+                                <h4>Urdu Nohay 2024</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Balti Best Nohay.png"
+                                    alt>
+                                <h4>Best Balti Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Playlist pic 3.png"
+                                    alt>
+                                <h4>Farsi Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Mir Hassan Mir Nohay.jpeg"
+                                    alt>
+                                <h4>Mir Hassan Mir Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Khawaja Ali Kazim Nohay.jpeg"
+                                    alt>
+                                <h4>Khawaja Ali Kazim Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Ali Akbar Nohay.jpeg"
+                                    alt>
+                                <h4>Ali Akbar Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Irani Best Nohay.jpeg"
+                                    alt>
+                                <h4>Irani Best Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Best Urdu Nohay.jpeg"
+                                    alt>
+                                <h4>Best Urdu Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                            <div class="playlist">
+                                <div class="play">
+                                    <img src="./SVG/play.svg"
+                                        alt="play button icon">
+                                </div>
+                                <img src="./pics/Best Nohay.jpeg"
+                                    alt>
+                                <h4>Best Nohay</h4>
+                                <p>By Muntazir Mehdi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer">
+                        <div class="footer_links">
+                            <div class="f_links flex">
+                                <div class="company">
+                                    <h4>Company</h4>
+                                    <ul>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Jobs</a></li>
+                                        <li><a href="#">For the Record</a></li>
+                                    </ul>
+                                </div>
+                                <div class="Communities">
+                                    <h4>Communities</h4>
+                                    <ul>
+                                        <li><a href="#">For Artists</a></li>
+                                        <li><a href="#">Developer</a></li>
+                                        <li><a href="#">Advertising</a></li>
+                                        <li><a href="#">Investors</a></li>
+                                        <li><a href="#">Vendors</a></li>
+                                    </ul>
+                                </div>
+                                <div class="Useful_links">
+                                    <h4>Useful links</h4>
+                                    <ul>
+                                        <li><a href="#">Support</a></li>
+                                        <li><a href="#">Free Mobile App</a></li>
+                                        <li><a href="#">Popular by
+                                                Country</a></li>
+                                    </ul>
+                                </div>
+                                <div class="Spotify_Plans">
+                                    <h4>Spotify Plans</h4>
+                                    <ul>
+                                        <li><a href="#">Premium
+                                                Individual</a></li>
+                                        <li><a href="#">Premium Duo</a></li>
+                                        <li><a href="#">Premium Family</a></li>
+                                        <li><a href="#">Premium Student</a></li>
+                                        <li><a href="#">Spotify Free</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="f_socialmedia">
+                                <div class="insta">
+                                    <svg data-encore-id="icon" role="img"
+                                        aria-hidden="true"
+                                        class="e-91000-icon e-91000-baseline"
+                                        viewBox="0 0 16 16"
+                                        style="--encore-icon-fill: var(--text-base, #000000); --encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);"><path
+                                            d="M8 1.44c2.136 0 2.389.009 3.233.047.78.036 1.203.166 1.485.276.348.128.663.332.921.598.266.258.47.573.599.921.11.282.24.706.275 1.485.039.844.047 1.097.047 3.233s-.008 2.389-.047 3.232c-.035.78-.166 1.204-.275 1.486a2.65 2.65 0 0 1-1.518 1.518c-.282.11-.706.24-1.486.275-.843.039-1.097.047-3.233.047s-2.39-.008-3.232-.047c-.78-.035-1.204-.165-1.486-.275a2.5 2.5 0 0 1-.921-.599 2.5 2.5 0 0 1-.599-.92c-.11-.282-.24-.706-.275-1.486-.038-.844-.047-1.096-.047-3.232s.009-2.39.047-3.233c.036-.78.166-1.203.275-1.485.129-.348.333-.663.599-.921a2.5 2.5 0 0 1 .92-.599c.283-.11.707-.24 1.487-.275.843-.038 1.096-.047 3.232-.047L8 1.441zm.001-1.442c-2.172 0-2.445.01-3.298.048-.854.04-1.435.176-1.943.373a3.9 3.9 0 0 0-1.417.923c-.407.4-.722.883-.923 1.417-.198.508-.333 1.09-.372 1.942S0 5.826 0 8c0 2.172.01 2.445.048 3.298.04.853.174 1.433.372 1.941.2.534.516 1.017.923 1.417.4.407.883.722 1.417.923.508.198 1.09.333 1.942.372s1.126.048 3.299.048 2.445-.01 3.298-.048c.853-.04 1.433-.174 1.94-.372a4.1 4.1 0 0 0 2.34-2.34c.199-.508.334-1.09.373-1.942S16 10.172 16 7.999s-.01-2.445-.048-3.298c-.04-.853-.174-1.433-.372-1.94a3.9 3.9 0 0 0-.923-1.418A3.9 3.9 0 0 0 13.24.42c-.508-.197-1.09-.333-1.942-.371-.851-.041-1.125-.05-3.298-.05z"></path><path
+                                            d="M8 3.892a4.108 4.108 0 1 0 0 8.216 4.108 4.108 0 0 0 0-8.216m0 6.775a2.668 2.668 0 1 1 0-5.335 2.668 2.668 0 0 1 0 5.335m4.27-5.978a.96.96 0 1 0 0-1.92.96.96 0 0 0 0 1.92"></path></svg>
+                                </div>
+                                <div class="twitter">
+                                    <svg data-encore-id="icon" role="img"
+                                        aria-hidden="true"
+                                        class="e-91000-icon e-91000-baseline"
+                                        viewBox="0 0 16 16"
+                                        style="--encore-icon-fill: var(--text-base, #000000); --encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);"><path
+                                            d="M13.54 3.889a2.97 2.97 0 0 0 1.333-1.683 6 6 0 0 1-1.929.738 3 3 0 0 0-.996-.706 3 3 0 0 0-1.218-.254 2.92 2.92 0 0 0-2.143.889 2.93 2.93 0 0 0-.889 2.15q0 .318.08.691a8.5 8.5 0 0 1-3.484-.932A8.5 8.5 0 0 1 1.532 2.54a3 3 0 0 0-.413 1.523q0 .778.361 1.445.36.668.988 1.08a2.9 2.9 0 0 1-1.373-.374v.04q0 1.088.69 1.92a2.97 2.97 0 0 0 1.739 1.048 2.94 2.94 0 0 1-1.365.056 2.94 2.94 0 0 0 1.063 1.5 2.95 2.95 0 0 0 1.77.603 5.94 5.94 0 0 1-3.77 1.302q-.365 0-.722-.048A8.4 8.4 0 0 0 5.15 14q1.358 0 2.572-.361 1.215-.36 2.147-.988a9 9 0 0 0 1.683-1.46q.75-.834 1.234-1.798a9.5 9.5 0 0 0 .738-1.988 8.4 8.4 0 0 0 .246-2.429 6.2 6.2 0 0 0 1.508-1.563q-.84.373-1.738.476"></path></svg>
+                                </div>
+                                <div class="facebook">
+                                    <svg data-encore-id="icon" role="img"
+                                        aria-hidden="true"
+                                        class="e-91000-icon e-91000-baseline"
+                                        viewBox="0 0 16 16"
+                                        style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);"><path
+                                            d="M16 8a8 8 0 1 0-9.25 7.903v-5.59H4.719V8H6.75V6.237c0-2.005 1.194-3.112 3.022-3.112.875 0 1.79.156 1.79.156V5.25h-1.008c-.994 0-1.304.617-1.304 1.25V8h2.219l-.355 2.313H9.25v5.59A8 8 0 0 0 16 8"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_copyright">
+                            <h5>&copy; 2025 Spotify AB</h5>
+                        </div>
+                    </div>
+
+                    <div class="playbar">
+                        <div class="playbar_upper">
+                            <div class="noha_playbar_info">
+
+                            </div>
+
+                            <div class="playcontrol">
+                                <img id="previous" src="./SVG/previous.svg"
+                                    alt="previous icon">
+                                <div class="music_play"><img id="play"
+                                        src="./SVG/play.svg"
+                                        alt="play icon"></div>
+                                <img id="next" src="./SVG/next.svg"
+                                    alt="next icon">
+                            </div>
+
+                            <div class="noha_audio_control">
+                                <div class="volume_buttons">
+                                    <img id="volume_icon"
+                                        src="./SVG/volume_full.svg"
+                                        alt="volume icon">
+                                    <div class="volume_seekbar">
+                                        <div class="volume_seekbar_filling">
+                                        </div>
+                                        <div class="volume_circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="playbar_lower">
+                            <div class="noha_time_update">
+                                00:00
+                            </div>
+                            <div class="seekbar">
+                                <div class="seekbar_buffered"></div>
+                                <div class="seekbar_filling"> </div>
+                                <div class="circle"></div>
+                            </div>
+                            <div class="noha_total_duration">
+                                00:00
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="sign_up flex">
+                <div class="sign_up_text">
+                    <h5>Preview of Spotify</h5>
+                    <h4>Sign up to get unlimited songs and podcasts with
+                        occasional
+                        ads. No credit card needed.</h4>
+                </div>
+                <button>Sign up free</button>
+            </div>
+
+        </div>
+
+        <script src="./scripts/script.js"></script>
+    </body>
+</html>
