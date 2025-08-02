@@ -1,0 +1,1591 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.navbar{
+    height: 8vh;
+    flex: 0 0 auto;
+    align-items: center
+}
+
+.logo_bar {
+    flex-shrink: 0;
+    width: clamp(80px, 9vw, 140px);
+    justify-content: space-between;
+    padding: 10px 0px 5px 1.5vw;
+    align-items: center;
+}
+
+.logo_bar img {
+    width: clamp(25px, 2vw, 32px);
+    height: auto;
+    flex-shrink: 0;
+    vertical-align: middle;
+}
+
+.firstlogo {
+    flex-shrink: 0;
+    align-content: center;
+    cursor: pointer;
+}
+
+.Secondlogo{
+    display: none;
+}
+
+.library_icon{
+    display: none;
+}
+
+.library_icon img{
+    width: clamp(34px, 2.5vw, 48px);
+    height: clamp(34px, 2.5vw, 48px);
+}
+
+.home {
+    background-color: #1f1f1f;
+    color: white;
+    border-radius: 50%;
+    width: clamp(34px, 2.5vw, 48px);
+    height: clamp(34px, 2.5vw, 48px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.home img {
+    width: 60%;
+    height: auto;
+}
+
+.search_bar {
+    flex: 1 2 0;
+    width: clamp(250px, 30vw, 600px);
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    color: white;
+    border-radius: 50px;
+    margin: 8px;
+    padding: 8px 17px 6px 14px;
+    gap: 10px;
+    transition: all 0.3s ease;
+
+}
+
+.search_bar input {
+    flex: 1 2 0;
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0;
+    margin-left: -2px;
+    height: 100%;
+    line-height: 1.2;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.search_bar input::placeholder {
+    color: rgb(190, 186, 186);
+    font-size: 0.95rem;
+}
+
+.search_bar input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 26px;
+    cursor: pointer;
+    margin-right: -10px;
+    opacity: 0.6;
+    background: url(./SVG/Cross.svg)no-repeat;
+    filter: invert(1);
+    background-size: contain;
+}
+
+.search_icon img,
+.browse_icon img {
+    width: 1.5vw;
+    max-width: 24px;
+    min-width: 16px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.browse_icon {
+    padding-inline: 12px 4px;
+    border-left: 1px solid rgba(255, 255, 255, 0.548);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: gray;
+    font-weight: bold;
+}
+
+.link_bar {
+    width: 61vw;
+    min-width: 0;
+    display: flex;
+    flex-shrink: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.links {
+    padding: 6px 0px;
+    padding-inline: 12px 22px;
+    border-right: 2px solid rgba(255, 255, 255, 0.856);
+}
+
+.account {
+    padding-left: 20px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.link_bar img {
+    width: 16px;
+    display: inline;
+}
+
+.account ul,
+.links ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+}
+
+.links ul li a {
+    font-size: clamp(9px, 1.4vw, 16px);
+    font-weight: 600;
+    color: #aaa;
+    text-decoration: none;
+    display: flex;
+}
+
+.links ul li img {
+    display: none;
+}
+
+.account ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: clamp(7px, 1.2vw, 14px);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: clamp(10px, 1.2vw, 14px) clamp(4px, 0.6vw, 17px);
+}
+
+.login_btn a {
+    color: black !important;
+    font-size: clamp(13px,2vw,15px) !important;
+    font-weight: 600 !important;
+}
+
+.login_btn {
+    width: 7vw;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_toggle {
+    display: none;
+}
+
+.menu_toggle img {
+    cursor: pointer;
+}
+
+.cross_icon_round {
+    background-color: #1f1f1f;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navbar CSS End --------------------*/
+
+.main_page{
+    /* width: 100vw;
+    height: 81.6vh; */
+    flex: 0 0 auto;
+}
+
+/* Library Section CSS Starts ---------------- */
+.library_section {
+    width: 26vw;
+    height: 81.6vh;
+    flex-shrink: 0;
+    margin: 4px 5px 10px 10px;
+    padding: 0px 9px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.library{
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px clamp(0px,1vw,12px) 20px clamp(0px,1vw,12px);
+}
+
+.library p{
+    font-size: clamp(13px,1vw,18px);
+    font-weight: 700;
+}
+
+.library span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.library span:hover {
+    background-color: #7c7b7b4d;
+}
+
+.library span img{
+    width: 1vw;
+    max-width: 35px;
+    min-width: 16px;
+    height: auto;
+    flex-shrink: 0;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.library_main_content{
+    height: 48vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Scroll bar customization Css End -------------------- */
+
+.library_main_content::-webkit-scrollbar {
+    width: 10px; 
+}
+
+.library_main_content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.library_main_content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.library_main_content::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+}
+
+/* Hover effects */
+
+.library_main_content:hover::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.library_main_content:hover::-webkit-scrollbar-thumb {
+    background-color: #444;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.library_main_content::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+/* Scroll bar customization Css End -------------------- */
+
+.library_playlist_podcast{
+    /* display: none; */
+}
+
+.create_playlist{
+    width: 100%;
+    /* height: 17.3vh; */
+    margin: 16px 0px 5px 0px;
+    padding: clamp(15px,1.5vw,24px) clamp(15px,1.5vw,24px) clamp(12px,1.5vw,18px) clamp(15px,1.5vw,24px);
+}
+
+.create_playlist div h3{
+    font-size: clamp(12px,1vw,20px);
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.create_playlist div p{
+    font-size: clamp(10px,1vw,13px);
+    color: #e6dede;
+    font-weight: 600;
+    padding-bottom: clamp(10px,1vw,15px);
+}
+
+.create_playlist div button{
+    padding: clamp(8px, 1vw, 10px) clamp(12px, 2vw, 17px) clamp(8px, 1vw, 10px) clamp(12px, 2vw, 17px);
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-size: clamp(10px,1vw,14px);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.find_podcast{
+    width: 100%;
+    /* height: 17.3vh; */
+    margin: 20px 0px 15px 0px;
+    padding: clamp(15px,1.5vw,24px) clamp(15px,1.5vw,24px) clamp(12px,1.5vw,18px) clamp(15px,1.5vw,24px);
+}
+
+.find_podcast div h3{
+    font-size: clamp(12px,1vw,20px);
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+.find_podcast div p{
+    font-size: clamp(10px,1vw,13px);
+    color: #e6dede;
+    font-weight: 600;
+    padding-bottom: clamp(8px,1vw,15px);
+}
+
+.find_podcast div button{
+    padding: clamp(8px, 1vw, 10px) clamp(12px, 2vw, 17px) clamp(8px, 1vw, 10px) clamp(12px, 2vw, 17px);
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+    color: black;
+    font-size: clamp(10px,1vw,14px);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.noha_list{
+    justify-items: center;
+    /* padding: 0px 0px 0px 4px; */
+    margin: 0px 6px;
+    display: none;
+}
+
+.noha{
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    margin: 8px 6px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.noha:hover{
+    background-color: #46434391;
+}
+
+.noha img{
+    width: 24px;
+    filter: invert(1);
+}
+
+.noha_detail{
+    gap: 6px;
+    align-items: center;
+}
+
+.noha_info{
+    width: 12.1vw;
+}
+
+.noha_info > div {
+    font-size: 13px;
+    line-height: 1.3em;
+    max-height: 3.9em; /* 1.3em * 3 = 3.9em */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+
+.noha_playnow{
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.noha_playnow > div{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.noha_playnow img{
+    border: 2px solid black;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.about_links{
+    position: absolute;
+    bottom: clamp(30px, 8vh, 80px);
+    width: 98%;
+    height: 14vh;
+    margin: 70px 0px 5px 0px;
+    padding: clamp(10px,1vw,15px);
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.about_links div{
+    margin-top: clamp(-10px,12vw,-50px);
+    margin-bottom: clamp(-10px,12vw,-50px);
+}
+
+.about_links a{
+    font-size: clamp(10px,1vw,12px);
+    color: #aaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.about_links div:last-child a{
+    color: white;
+    flex-direction: column;
+}
+
+.about_links div:last-child a:hover{
+    text-decoration: underline;
+}
+
+.about_links > div:last-of-type {
+  display: block;
+  width: 100%;
+}
+
+.language{
+    width: 100%;
+    position: absolute;
+    left: 14px;
+    bottom: clamp(2px, 2.5vh, 37px);
+    /* bottom: 5px; */
+    /* height: 8vh; */
+    flex-shrink: 0;
+    margin: clamp(16px, 0.8vh, 28px) 0px 5px clamp(5px, 1.2vh, 18px);
+}
+
+.language button{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid #aaa;
+    padding: clamp(2px, 1vh, 6px) clamp(5px, 2vw, 14px) clamp(2px, 1vh, 6px) clamp(5px, 2vw, 14px);
+    gap: 8px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.language img{
+    width: clamp(12px,1vw,16px);
+}
+
+.language p{
+    color: white;
+    font-size: clamp(11px, 1.2vh, 20px);
+    font-weight: 800;
+}
+
+.Content_section {
+    width: 72.3vw;
+    height: 81.6vh;
+    flex-shrink: 0;
+    margin: 4px 5px 10px 5px;
+    padding: 25px 5px 25px 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Scroll bar customization Css Start -------------------- */
+
+.Content_section::-webkit-scrollbar {
+    width: 12px;
+}
+
+.Content_section::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.Content_section::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.Content_section::-webkit-scrollbar-button {
+    display: none;
+    height: 0;
+}
+
+/* Hover effects */
+
+.Content_section:hover::-webkit-scrollbar-track {
+    background: #111;
+}
+
+.Content_section:hover::-webkit-scrollbar-thumb {
+    background-color: #444;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.Content_section:hover::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+/* Scroll bar customization Css End -------------------- */
+
+.content{
+    /* display: none; */
+}
+
+/* Trending Nohas Section -------------*/
+.trend{
+    margin-left: 15px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trend h2{
+    cursor: pointer;
+}
+
+.trend h2:hover{
+    text-decoration: underline;
+}
+
+.trend h5{
+    color: #aaa;
+    padding-right: 10px;
+    cursor: pointer;
+} 
+
+.trend h5:hover{
+    text-decoration: underline;
+}
+
+.trending{
+    white-space: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.trending::-webkit-scrollbar {
+        display: none;
+    }
+
+.trending .scroll-slide {
+    position: absolute;
+    top: calc(55% - 140px);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #252525;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.trending .scroll-slide img{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.trending .scroll-slide button{
+    background-color: transparent;
+    filter: invert(1);
+    border: none;
+}
+
+.trending .scroll-slide.left {
+    width: 40px;
+}
+
+.trending .scroll-slide.right {
+    right: 1.6rem;
+}
+
+.cart{
+    position: relative;
+    padding: 10px 12px 15px 12px;
+    cursor: pointer;
+}
+
+.cart img{
+    width: 170px;
+    height: 170px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(112, 112, 112, 0.274);
+}
+
+.cart h4{
+    width: 170px;
+    padding: 8px 0px 8px 0px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.3em;
+    max-height: 4.5em;
+}
+
+.cart p{
+    font-size: 14px;
+    color: #aaa;
+}
+
+.cart:hover{
+    background-color: #36363685;
+    border-radius: 6px;
+}
+
+.cart .play{
+    position: absolute;
+    /* top: 125px; */
+    top: 165px;
+    left: 65%;
+    width: 48px;
+    height: 48px;
+    background-color: #1fdf64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.cart .play:hover{
+    border: 2px solid #1fdf64;
+}
+
+.cart .play img{
+    width: 24px;
+    height: 24px;
+    box-shadow: none;
+}
+
+/* ----- Trending Section End----- */
+
+/* Trending Show all section------------ */
+.trending_showall_carts{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trending_showall{
+    margin-left: 40px;
+    display: none;
+}
+
+.trending_showall h1{
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Trending Show all section End---------- */
+
+/* Popular Artists ------------*/
+.popular{
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular h2{
+    cursor: pointer;
+}
+
+.popular h2:hover{
+    text-decoration: underline;
+}
+
+.popular h5{
+    color: #aaa;
+    padding-right: 10px;
+    cursor: pointer;
+} 
+
+.popular h5:hover{
+    text-decoration: underline;
+}
+
+.popular_artist{
+    white-space: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.popular_artist::-webkit-scrollbar {
+        display: none;
+    }
+
+.profile{
+    position: relative;
+    padding: 10px 12px 15px 12px;
+    cursor: pointer;
+}
+
+.profile img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px rgba(112, 112, 112, 0.185);
+}
+
+.profile h4{
+    width: 170px;
+    padding: 8px 0px 8px 0px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.3em;
+    max-height: 4.5em;
+}
+
+.profile p{
+    font-size: 14px;
+    color: #aaa;
+}
+
+.profile:hover{
+    background-color: #36363685;
+    border-radius: 6px;
+}
+
+.profile .play{
+    position: absolute;
+    /* top: 125px; */
+    top: 165px;
+    left: 65%;
+    width: 48px;
+    height: 48px;
+    background-color: #1fdf64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.profile .play:hover{
+    border: 2px solid #1fdf64;
+}
+
+.profile .play img{
+    width: 24px;
+    height: 24px;
+    box-shadow: none;
+}
+
+.popular_artist_wrapper {
+    position: relative;
+}
+
+.popular_artist_wrapper .scroll-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.popular_artist_wrapper .scroll-slide.left {
+    left: 0.5rem;
+}
+
+.popular_artist_wrapper .scroll-slide.right {
+    right: 0.5rem;
+}
+
+.popular_artist_wrapper .scroll-slide img {
+    width: 20px;
+    height: 20px;
+}
+
+.popular_artist_wrapper .scroll-slide button {
+    background-color: transparent;
+    filter: invert(1);
+    border: none;
+}
+
+/* ----- Popular Artist Section End----- */
+
+/* Popular Artist Show all section------------ */
+.artist_showall_profile{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist_showall{
+    margin-left: 40px;
+    display: none;
+}
+
+.artist_showall h1{
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Popular Artist Show all section End---------- */
+
+/* Popular Album Nohas----------------- */
+.popular_album{
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular_album h2{
+    cursor: pointer;
+}
+
+.popular_album h2:hover{
+    text-decoration: underline;
+}
+
+.popular_album h5{
+    color: #aaa;
+    padding-right: 10px;
+    cursor: pointer;
+} 
+
+.popular_album h5:hover{
+    text-decoration: underline;
+}
+
+.albums{
+    white-space: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.albums::-webkit-scrollbar {
+        display: none;
+    }
+
+.albums_wrapper{
+    position: relative;
+}
+
+.albums_wrapper .scroll-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.albums_wrapper .scroll-slide.left {
+    left: 0.5rem;
+}
+
+.albums_wrapper .scroll-slide.right {
+    right: 0.5rem;
+}
+
+.albums_wrapper .scroll-slide img {
+    width: 20px;
+    height: 20px;
+}
+
+.albums_wrapper .scroll-slide button {
+    background-color: transparent;
+    filter: invert(1);
+    border: none;
+}
+
+.album{
+    position: relative;
+    padding: 10px 12px 15px 12px;
+    cursor: pointer;
+}
+
+.album img{
+    /* position: relative; */
+    width: 170px;
+    height: 170px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(112, 112, 112, 0.274);
+}
+
+.album h4{
+    width: 170px;
+    padding: 8px 0px 8px 0px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.3em;
+    max-height: 4.5em;
+}
+
+.album p{
+    font-size: 14px;
+    color: #aaa;
+}
+
+.album:hover{
+    background-color: #36363685;
+    border-radius: 6px;
+}
+
+.album .play{
+    position: absolute;
+    /* top: 125px; */
+    top: 165px;
+    left: 65%;
+    width: 48px;
+    height: 48px;
+    background-color: #1fdf64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.album .play:hover{
+    border: 2px solid #1fdf64;
+}
+
+.album .play img{
+    width: 24px;
+    height: 24px;
+    box-shadow: none;
+}
+
+/* -----Popular Album Section End----- */
+
+/* Popular Album Show all section------------ */
+.popular_album_showall_album{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular_album_showall{
+    margin-left: 40px;
+    display: none;
+}
+
+.popular_album_showall h1{
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Popular Album Show all section End---------- */
+
+/* Popular playlist Nohas */
+.popular_playlist{
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular_playlist h2{
+    cursor: pointer;
+}
+
+.popular_playlist h2:hover{
+    text-decoration: underline;
+}
+
+.popular_playlist h5{
+    color: #aaa;
+    padding-right: 10px;
+    cursor: pointer;
+} 
+
+.popular_playlist h5:hover{
+    text-decoration: underline;
+}
+
+.playlists{
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.playlists::-webkit-scrollbar {
+        display: none;
+    }
+
+.playlist_wrapper{
+    position: relative;
+}
+
+.playlist_wrapper .scroll-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease-in-out, opacity 400ms ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.playlist_wrapper .scroll-slide.left {
+    left: 0.5rem;
+}
+
+.playlist_wrapper .scroll-slide.right {
+    right: 0.5rem;
+}
+
+.playlist_wrapper .scroll-slide img {
+    width: 20px;
+    height: 20px;
+}
+
+.playlist_wrapper .scroll-slide button {
+    background-color: transparent;
+    filter: invert(1);
+    border: none;
+}
+
+.playlist{
+    position: relative;
+    padding: 10px 12px 15px 12px;
+}
+
+.playlist img{
+    /* position: relative; */
+    width: 170px;
+    height: 170px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(112, 112, 112, 0.274);
+}
+
+.playlist h4{
+    width: 170px;
+    padding: 8px 0px 8px 0px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.3em;
+    max-height: 4.5em;
+}
+
+.playlist p{
+    font-size: 14px;
+    color: #aaa;
+}
+
+.playlist:hover{
+    background-color: #36363685;
+    border-radius: 6px;
+}
+
+.playlist .play{
+    position: absolute;
+    /* top: 125px; */
+    top: 165px;
+    left: 65%;
+    width: 48px;
+    height: 48px;
+    background-color: #1fdf64;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.playlist .play:hover{
+    border: 2px solid #1fdf64;
+}
+
+.playlist .play img{
+    width: 24px;
+    height: 24px;
+    box-shadow: none;
+}
+
+/* ----- Popular playlist Section End----- */
+
+/* Popular playlist Show all section------------ */
+.popular_playlist_showall_playlist{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.popular_playlist_showall{
+    margin-left: 40px;
+    display: none;
+}
+
+.popular_playlist_showall h1{
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/* Popular Album Show all section End---------- */
+
+
+/* Playbar CSS Start  */
+.playbar{
+    position: fixed;
+    width: 71vw;
+    height: 18vh;
+    background-color: rgb(0, 0, 0);
+    bottom: 11vh;
+    right: clamp(5px, 1.1vw, 30px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    outline: 1px solid #444;
+    display: none;
+    flex-shrink: 1;
+}
+
+.playbar_upper{
+    width: 66vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    padding-right: 6px;
+}
+
+.noha_playbar_info{
+    width: 27vw;
+    height: 4vh;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    padding-top: 5px;
+}
+
+.playcontrol{
+    width: 12vw;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.playcontrol img{
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(86%) contrast(100%);
+    cursor: pointer;
+}
+
+#previous:hover{
+    filter: invert(1);
+}
+
+#next:hover{
+    filter: invert(1);
+}
+
+.music_play{
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.music_play img{
+    filter: invert(0);
+}
+
+.noha_audio_control{
+    width: 27vw;
+    height: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.volume_buttons img{
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(86%) contrast(100%);
+    cursor: pointer;
+}
+
+.volume_buttons img:hover{
+    filter: invert(1);
+}
+
+.volume_buttons{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.volume_seekbar{
+    position: relative;
+    width: 8vw;
+    height: 5px;
+    background-color: #383838;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.volume_seekbar_filling{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: width 0.5s;
+} 
+
+.volume_circle{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 2;
+    opacity: 0;
+    transition: left 0.5s;
+}
+
+.volume_seekbar:hover .volume_seekbar_filling{
+    background-color: #1fdf64;
+}
+
+.volume_seekbar:hover .volume_circle {
+  opacity: 1;
+}
+
+.playbar_lower{
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 4px;
+}
+
+.noha_time_update{
+    width: 45px;
+    height: 23px;
+}
+
+.noha_total_duration{
+    width: 45px;
+    height: 23px;
+}
+
+.seekbar{
+    position: relative;
+    width: 85%;
+    height: 6px;
+    background-color: #383838;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.seekbar_buffered {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background-color: rgba(255, 255, 255, 0.3); 
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.seekbar_filling{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    border-radius: 13px;
+    z-index: 2;
+    opacity: 0;
+    transition: left 0.5s;
+}
+
+.seekbar:hover .seekbar_filling{
+    background-color: #1fdf64;
+}
+
+.seekbar:hover .circle {
+  opacity: 1;
+}
+
+.noha_time_update{
+    width: 45px;
+    height: 23px;
+}
+
+.noha_total_duration{
+    width: 45px;
+    height: 23px;
+}
+
+
+/* Footer --------------------*/
+.footer_links{
+    display: flex;
+    justify-content: space-between;
+    padding: 65px 10px 55px 10px;
+    border-top: 1px solid #383838;
+    border-bottom: 1px solid #383838;
+    margin-top: 30px;
+}
+
+.f_links{
+    display: flex;
+    /* gap: 95px; */
+    gap: clamp(30px,20vw,95px);
+    flex-wrap: wrap;
+}
+
+.f_links ul li a{
+    text-decoration: none;
+    color: #aaa;
+    margin: 10px 0px;
+}
+
+.f_links ul{
+    list-style: none;
+}
+
+.f_links ul li{
+    margin: 10px 0px;
+}
+
+.f_socialmedia{
+    display: flex;
+    gap: 15px;
+}
+
+.insta{
+    width: 36px;
+    height: 36px;
+    filter: invert(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #2c2b2b2a;
+}
+
+.twitter{
+    width: 36px;
+    height: 36px;
+    filter: invert(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #2c2b2b2a;
+}
+
+.facebook{
+    width: 36px;
+    height: 36px;
+    filter: invert(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #2c2b2b2a;
+}
+
+.footer_copyright{
+    padding: 40px 10px 40px 10px;
+}
+
+.footer_copyright h5{
+    color: #aaa;
+}
+/* Footer End---------------- */
+
+/* Sign up section ---------------- */
+.sign_up{
+    flex: 0 0 auto;
+    width: 99vw;
+    height: 8vh;
+    margin-left: 10px;
+    background: linear-gradient(to right, #af2896, #509bf5);
+    padding: clamp(12px,1vw,15px) clamp(18px,1.5vw,30px) clamp(12px,1vw,15px) clamp(12px,1vw,15px);
+    justify-content: space-between;
+    align-items: center;
+    box-sizing:border-box;
+}
+
+.sign_up h4{
+    padding-top: 4px ;
+    font-size: clamp(12px,1vw,16px);
+    font-weight: 400;
+}
+
+.sign_up button{
+    width: clamp(120px, 40vw, 155px);
+    height: 6vh;
+    border-radius: 40px;
+    background-color: white;
+    padding: 0px 4px;
+    color: black;
+    border: none;
+    font-size: clamp(10px,1vw,15px);
+    font-weight: 600;
+    margin-left: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+/* Sign up section End */

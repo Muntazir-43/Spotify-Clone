@@ -1,0 +1,44 @@
+.flex{
+    display: flex;
+}
+
+.border{
+    border: 2px solid red;
+}
+
+.justify_centre{
+    justify-content: center;
+}
+
+.item_centre{
+    align-items: center;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.invert_light{
+    filter: invert(1);
+    opacity: 0.8;
+    transition: filter 0.3s ease;
+}
+
+.rounded_box{
+    background-color: #121212;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.inner_rounded_box{
+    background-color: #1f1f1f;
+    color: white;
+    border-radius: 10px;
+}
+
+.li_flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
