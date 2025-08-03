@@ -68,7 +68,8 @@ Spotify-Clone/
 ├── css/
 │   └── style.css        # All styles and responsive design
 └── js/
-    └── script.js        # Core app logic (playback, views, localStorage)
+│   └── script.js        # Core app logic (playback, views, localStorage)
+└── README.md
 ```
 ---
 
