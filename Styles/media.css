@@ -1611,7 +1611,7 @@
   .Content_section {
     width: 95.5vw;
     margin: 4px 5px 10px 10px;
-    padding: 25px 5px 25px 10px;
+    padding: 25px 5px 25px 20px;
   }
 
   .artist_showall{
@@ -2097,3 +2097,4 @@
   }
 
 }
+
