@@ -561,7 +561,7 @@
 
 }
 
-@media (min-width: 479px) and (max-width: 520px){
+@media (min-width: 479px) and (max-width: 519px){
   .links {
     display: none;
     position: absolute;
@@ -860,7 +860,7 @@
 
 }
 
-@media (min-width: 439px) and (max-width: 480px){
+@media (min-width: 439px) and (max-width: 479px){
   .links {
     display: none;
     position: absolute;
@@ -1159,7 +1159,7 @@
 
 }
 
-@media (min-width: 411px) and (max-width: 440px) {
+@media (min-width: 411px) and (max-width: 439px) {
   .links {
     display: none;
     position: absolute;
@@ -1454,7 +1454,7 @@
 
 }
 
-@media (min-width: 389px) and (max-width: 412px) {
+@media (min-width: 389px) and (max-width: 411px) {
   .links {
     display: none;
     position: absolute;
@@ -1632,6 +1632,24 @@
     cursor: pointer;
   }
 
+  .profile{
+    position: relative;
+    padding: 10px 6px 15px 6px;
+    cursor: pointer;
+  }
+
+  .album{
+    position: relative;
+    padding: 10px 6px 15px 6px;
+    cursor: pointer;
+  }
+
+  .playlist{
+    position: relative;
+    padding: 10px 6px 15px 6px;
+    cursor: pointer;
+  }
+
   .trending_showall_carts{
     justify-content: center;
   }
@@ -1767,7 +1785,7 @@
 
 }
 
-@media (max-width: 390px) {
+@media (max-width: 389px) {
   .links {
     display: none;
     position: absolute;
@@ -2077,6 +2095,5 @@
   .sign_up h5{
     font-size: 0.5rem;
   }
-
 
 }
