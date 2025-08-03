@@ -67,7 +67,7 @@ Spotify-Clone/
 │   └── Nohas.json       # JSON mapping artists to Cloudinary MP3 URLs
 ├── css/
 │   └── style.css        # All styles and responsive design
-└── js/
+├── js/
 │   └── script.js        # Core app logic (playback, views, localStorage)
 └── README.md
 ```
