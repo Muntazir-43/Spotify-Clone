@@ -11,12 +11,12 @@ menuToggle.addEventListener("click", function () {
 
   if (menuOpen) {
     links.classList.add("show");
-    menuIcon.src = "./SVG/Cross.svg"; // use your close icon
+    menuIcon.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/Cross.svg"; // use your close icon
     menuToggle.classList = "cross_icon_round";
     menuIcon.alt = "Close Menu";
   } else {
     links.classList.remove("show");
-    menuIcon.src = "./SVG/menu.svg"; // back to hamburger
+    menuIcon.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/menu.svg"; // back to hamburger
     menuToggle.classList.remove("cross_icon_round");
     menuIcon.alt = "Open Menu";
   }
@@ -26,7 +26,7 @@ menuToggle.addEventListener("click", function () {
 document.addEventListener("click", function (event) {
   if (menuOpen && !menuToggle.contains(event.target) && !links.contains(event.target)) {
     links.classList.remove("show");
-    menuIcon.src = "./SVG/menu.svg";
+    menuIcon.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/menu.svg";
     menuToggle.classList.remove("cross_icon_round");
     menuIcon.alt = "Open Menu";
     menuOpen = false;
@@ -477,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showDefaultView();
     if (!current_noha.paused) {
         current_noha.pause();
-        document.getElementById("play").src = "./SVG/play.svg"; 
+        document.getElementById("play").src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/play.svg"; 
       }
     });
   });
@@ -493,7 +493,7 @@ let Artist = "";
 
 // Load JSON data
 async function loadNohasFromJson(folder) {
-  const response = await fetch("./assets/Nohas.json");
+  const response = await fetch("Assets/Nohas.json");
   const data = await response.json();
 
   if (!data[folder]) return { audios: [], artist: "" };
@@ -550,7 +550,7 @@ function playnoha(nohas, nohaUrl, pause = false) {
 
   if (!pause) {
     current_noha.play();
-    play.src = "./SVG/pause.svg";
+    play.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/pause.svg";
   }
 
   localStorage.setItem("lastNohaUrl", nohaUrl);
@@ -564,9 +564,9 @@ function updateVolumeUI(volume) {
   volumeFilling.style.width = `${volume * 100}%`;
   volumeCircle.style.left = `${volume * 100}%`;
 
-  if (volume === 0) volumeIcon.src = "./SVG/volume_cross.svg";
-  else if (volume <= 0.5) volumeIcon.src = "./SVG/volume_half.svg";
-  else volumeIcon.src = "./SVG/volume_full.svg";
+  if (volume === 0) volumeIcon.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/volume_cross.svg";
+  else if (volume <= 0.5) volumeIcon.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/volume_half.svg";
+  else volumeIcon.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/volume_full.svg";
 }
 
 function renderNohaList(nohas, artist) {
@@ -578,7 +578,7 @@ function renderNohaList(nohas, artist) {
     list.innerHTML += `
       <div class="noha flex" data-url="${url}">
         <div class="noha_detail flex">
-          <img src="./SVG/music-note.svg" alt />
+          <img src="https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/music-note.svg" alt />
           <div class="noha_info">
             <div>${name}</div>
             <div>${artist}</div>
@@ -586,7 +586,7 @@ function renderNohaList(nohas, artist) {
         </div>
         <div class="noha_playnow flex">
           <div>Play Now</div>
-          <img src="./SVG/play.svg" alt />
+          <img src="https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/play.svg" alt />
         </div>
       </div>
     `;
@@ -630,10 +630,10 @@ function setupPlaybackControls() {
   play.addEventListener("click", () => {
     if (current_noha.paused) {
       current_noha.play();
-      play.src = "./SVG/pause.svg";
+      play.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/pause.svg";
     } else {
       current_noha.pause();
-      play.src = "./SVG/play.svg";
+      play.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/play.svg";
     }
   });
 
@@ -653,7 +653,7 @@ function setupPlaybackControls() {
     } else {
       current_noha.pause();
       current_noha.currentTime = 0;
-      play.src = "./SVG/play.svg";
+      play.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/play.svg";
     }
   });
 
@@ -675,7 +675,7 @@ function setupPlaybackControls() {
       currentIndex++;
       playnoha(nohas, nohas[currentIndex], false);
     } else {
-      document.getElementById("play").src = "./SVG/play.svg";
+      document.getElementById("play").src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/play.svg";
     }
   });
 }
@@ -716,12 +716,12 @@ function setupLibraryIconToggle() {
 
   library_icon.addEventListener("click", () => {
     if (!isLibraryOpen) {
-      library_svg.src = "./SVG/Cross.svg";
+      library_svg.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/Cross.svg";
       library_svg.style.width = "18px";
       library_section.style.left = "0%";
       if (window.innerWidth < 599) playbar.style.bottom = "12vh";
     } else {
-      library_svg.src = "./SVG/Library.svg";
+      library_svg.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/Library.svg";
       library_svg.style.width = "26px";
       library_section.style.left = "-100%";
       if (window.innerWidth < 599) playbar.style.bottom = "11vh";
