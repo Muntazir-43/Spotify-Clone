@@ -721,7 +721,7 @@ function setupLibraryIconToggle() {
       library_section.style.left = "0%";
       if (window.innerWidth < 599) playbar.style.bottom = "12vh";
     } else {
-      library_svg.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/Library.svg";
+      library_svg.src = "https://raw.githubusercontent.com/Muntazir-43/Spotify-Clone/main/Assets/SVG/library.svg";
       library_svg.style.width = "26px";
       library_section.style.left = "-100%";
       if (window.innerWidth < 599) playbar.style.bottom = "11vh";
@@ -758,3 +758,4 @@ async function main() {
 }
 
 main();
+
